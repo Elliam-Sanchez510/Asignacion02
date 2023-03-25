@@ -6,10 +6,11 @@ export class Products {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column({type: 'text'})
+    @Column({type: 'text', unique: true,})
     nombre: string;
 
-    @Column({type: 'text'})
+    @Column({type: 'text', })
+    
     descripcion: string;
 
     @Column({type: 'numeric'})
@@ -17,5 +18,4 @@ export class Products {
 
     @Column({type: 'numeric'})
     stock: number;
-
 }
